@@ -1,0 +1,46 @@
+<!--
+Initial Configuration Values
+homebridge 0E:00:EC:60:72:CB 51400
+Accessory Info
+7XL2 2
+-->
+<service-group>
+  <name>docker-desktop</name>
+  <service>
+    <type>_hap._tcp</type>
+    <port>51400</port>
+
+    <!-- friendly name -->
+    <txt-record>md=homebridge</txt-record>
+
+    <!-- HAP version -->
+    <txt-record>pv=1.0</txt-record>
+    <!-- MAC -->
+    <txt-record>id=0E:00:EC:60:72:CB</txt-record>
+    <!-- Current configuration number -->
+    <txt-record>c#=2</txt-record>
+
+    <!-- accessory category -->
+    <txt-record>ci=2</txt-record>
+
+    <!-- accessory state
+          This must have a value of 1 -->
+    <txt-record>s#=1</txt-record>
+    <!-- Pairing Feature Flags
+         nothing to configure -->
+    <txt-record>ff=0</txt-record>
+    <!-- Status flags
+         0=not paired, 1=paired -->
+    <txt-record>sf=1</txt-record>
+    <!-- setup hash (used for pairing).
+         Required to support enhanced
+         setup payload information (but
+         not defined in the spec)        -->
+    <txt-record>sh=7hrPOA==</txt-record>
+  </service>
+</service-group>
+<!--
+
+Please ensure you have exposed port 51400
+
+-->

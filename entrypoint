@@ -1,0 +1,12 @@
+#!/bin/ash
+#
+# Launch the podman service/process if not previously launched. If parameters are not provided
+# launch as a process. If parameters provided fork the podman as a service.
+
+echo "$@"
+
+sudo /usr/bin/dbus-daemon --config-file /usr/share/dbus-1/system.conf
+sudo /usr/sbin/avahi-daemon --daemonize
+
+
+

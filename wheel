@@ -1,0 +1,4 @@
+# Avahi daemon launch for entrypoint
+%wheel         ALL = (ALL) NOPASSWD: /usr/sbin/avahi-daemon
+# DBUS daemon launch for entrypoint
+%wheel         ALL = (ALL) NOPASSWD: /usr/bin/dbus-daemon
